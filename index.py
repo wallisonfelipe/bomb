@@ -32,28 +32,16 @@ def main():
     for num in range(0, 12):
         pyautogui.click(rest_button)
         time.sleep(1)
-  pyautogui.scroll(-100)
+    pyautogui.scroll(-100)
     time.sleep(1)
     pyautogui.scroll(-100)
 
     time.sleep(1)
-  pyautogui.scroll(-100)
+    pyautogui.scroll(-100)
     time.sleep(1)
     pyautogui.scroll(-100)
 
     time.sleep(1)
-
-    # Coloca os bonecos pra trabalhar
-    for num in range(0, 12):
-        pyautogui.click(work_button)
-        time.sleep(1)
-
-while True:
-    main()
-    close_herois()
-    time.sleep(120+60)
-
-
 
     # Coloca os bonecos pra trabalhar
     for num in range(0, 12):
