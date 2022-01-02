@@ -3,7 +3,7 @@ FROM alpine
 LABEL maintainer="Naveen S R <srnaveen2k@yahoo.com>"
 
 ENV DISPLAY :52
-ENV RESOLUTION 1920x1080x24 
+ENV RESOLUTION 1366x768x24 
 
 RUN apk add sudo bash xfce4 xvfb xdpyinfo lightdm-gtk-greeter x11vnc xfce4-terminal chromium && \
     echo 'CHROMIUM_FLAGS="--disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --no-sandbox"' >> /etc/chromium/chromium.conf && \
