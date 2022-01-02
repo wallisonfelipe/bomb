@@ -1,10 +1,10 @@
 version: '3.7'
 
 services:
-  
-  corbot-selenium:
-    image: selenium/standalone-chrome-debug:3.141.5-astatine
-    container_name: corbot-selenium
+  bomb-selenium:
+    build:
+      context: .
+    container_name: bomb-selenium
     ports:
       - 5901:5900
       - 9055:4444
