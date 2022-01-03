@@ -1,10 +1,22 @@
-version: '3.7'
-
+version: "3"
 services:
-  bomb-selenium:
+  bot-1:
+    container_name: bot-1
+    tty: true
     build:
       context: .
-    container_name: bomb-selenium
+    restart: unless-stopped
+    cap_add:
+      # Google Chrome
+      - SYS_ADMIN
+    environment:
+      - VNC_PASSWORD=passwd
+      - HTTP_PASSWORD=passwd
+      - TZ=America/Sao_Paulo
+      - RESOLUTION=1366x768
+      - USER=ubuntu
+    volumes:
+       - /dev/shm:/dev/shm
     ports:
-      - 5901:5900
-      - 9055:4444
+      - 5900:5900
+      - 6080:80
